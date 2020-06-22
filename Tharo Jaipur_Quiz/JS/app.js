@@ -70,7 +70,7 @@ function submitForm(e) {
 	e.preventDefault(); 
 	let name = document.forms['welcome_form']['name'].value;
 	sessionStorage.setItem('name', name);
-	location.href = 'HTML/quiz.html';
+	location.href = '/HTML/quiz.html';
 }
 
 let question_count = 0;
@@ -83,7 +83,7 @@ function next() {
 		sessionStorage.setItem('points', point);
 	}
 	if (question_count == questions.length - 1) {
-		location.href = 'HTML/end.html';
+		location.href = '/HTML/end.html';
 		sessionStorage.setItem('time', `${minutes} minutes and ${seconds} seconds`);
 		clearInterval(mytime);
 		return;
